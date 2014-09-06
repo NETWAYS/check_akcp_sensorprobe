@@ -1,9 +1,9 @@
-name: 
+name: check_akcp_sensorprobe
 description: "file:///README.md"
 url: "https://www.netways.org/projects/plugins"
 tags: ~
-vendor: Netways
-target: Temperature
+vendor: NETWAYS,AKCP
+target: Environmental
 type: Plugin
 license: gplv2
 releases: 

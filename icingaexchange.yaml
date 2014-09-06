@@ -1,0 +1,19 @@
+name: 
+description: "file:///README.md"
+url: "https://www.netways.org/projects/plugins"
+tags: ~
+vendor: Netways
+target: Temperature
+type: Plugin
+license: gplv2
+releases: 
+  - 
+    name: 1.0
+    description: "1.0 Release"
+    files: 
+      - 
+        name: check_akcp_sensorprobe.pl
+        url: "file:///check_akcp_sensorprobe.pl"
+        description: none
+        checksum: 731ef2802d366add0c53274510681cf3
+

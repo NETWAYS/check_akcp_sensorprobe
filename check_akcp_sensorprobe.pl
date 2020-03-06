@@ -5,7 +5,7 @@
 
 =head1 COPYRIGHT
 
- 
+
 This software is Copyright (c) 2010 NETWAYS GmbH, Thomas Gelf
                                <support@netways.de>
 
@@ -247,7 +247,7 @@ sub checkTempSensor {
 
     my %result = fetchOids({
 	    $oid . '.1.1.'  . $id  => 'description',  # Sensor name / description
-	    $oid . '.1.14.' . $id  => 'degree',	      # Currently measured degree
+	    $oid . '.1.3.' . $id  => 'degree',	      # Currently measured degree
 	    $oid . '.1.4.'  . $id  => 'status',	      # Sensor status, see %status_map
 	    $oid . '.1.7.'  . $id  => 'highWarning',  # Configured upper warning threshold
 	    $oid . '.1.8.'  . $id  => 'highCritical', # Configured upper critical threshold
@@ -267,7 +267,7 @@ sub checkTempSensor {
 	    '%s Temperature sensor "%s": %.2f%s (%.1f:%.1f/%.1f:%.1f)',
         $status_map{$result{'status'}},
         $result{'description'},
-        $result{'degree'} / 10,
+        $result{'degree'},
         $degree_map{$result{'degreeType'}},
         $result{'lowWarning'},
         $result{'highWarning'},

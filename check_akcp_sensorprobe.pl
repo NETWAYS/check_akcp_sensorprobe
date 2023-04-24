@@ -87,7 +87,6 @@ use Getopt::Long;
 use Pod::Usage;
 use File::Basename;
 use Net::SNMP;
-use Data::Dumper;
 
 # predeclared subs
 use subs qw/help fail fetchOids checkAkcp/;

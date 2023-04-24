@@ -87,7 +87,6 @@ use Getopt::Long;
 use Pod::Usage;
 use File::Basename;
 use Net::SNMP;
-use Data::Dumper;
 
 # predeclared subs
 use subs qw/help fail fetchOids checkAkcp/;
@@ -209,7 +208,14 @@ foreach (keys %performance) {
 my $info_delim = ', ';
 $info_delim = "\n";
 printf('%s %s|%s', $global_state, join($info_delim, @info), join(' ', sort @perflist));
-exit $states{$global_state};
+nagexit($states{$global_state});
+
+sub nagexit {
+    my $errlevel = shift;
+     # Default exit
+    $errlevel = 'UNKNOWN' unless ($errlevel);
+    exit $states{$errlevel};
+}
 
 sub checkAkcp()
 {
